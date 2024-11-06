@@ -1,292 +1,280 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Buscaminas</title>
-  <link
-          href="https://fonts.cdnfonts.com/css/ds-digital"
-          rel="stylesheet"
-  >
-  <link
-          href="https://fonts.cdnfonts.com/css/square-dance"
-          rel="stylesheet"
-  >
-  <style>
-    body {
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      margin: 0;
-      text-align: center;
-      font-family: Arial, sans-serif;
-    }
-
-    h1 {
-      margin: 50px 0;
-      font-family: "Arial", sans-serif;
-    }
-
-    table {
-      border-collapse: separate;
-      border-spacing: 2px;
-      background-color: #c0c0c0;
-      border: 4px outset #ffffff;
-      padding: 10px;
-      height: 480px;
-      width: 380px;
-    }
-
-    .top-bar {
-      background-color: #c0c0c0;
-      border: 3px inset #808080;
-      height: 60px;
-      padding: 3px;
-    }
-
-    .digital-display {
-      background-color: black;
-      color: red;
-      font-size: 50px;
-      font-weight: bold;
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0 30px;
-      font-family: "DS-Digital", sans-serif;
-    }
-
-    .emoji {
-      width: 50px;
-      height: 50px;
-      background-color: #c0c0c0;
-      border: 2px outset #ffffff;
-      vertical-align: middle;
-    }
-
-    .game-cell {
-      width: 30px;
-      height: 30px;
-      background-color: #c0c0c0;
-      text-align: center;
-      vertical-align: middle;
-      font-weight: bold;
-      border: 2px outset #ffffff;
-      padding: 0;
-    }
-
-    .number-1 {
-      color: blue;
-    }
-
-    .number-2 {
-      color: green;
-    }
-
-    .number-3 {
-      color: red;
-    }
-
-    .flag-img {
-      width: 24px;
-      height: 24px;
-    }
-
-    .game-grid td {
-      width: 30px;
-      height: 40px;
-      background-color: #c0c0c0;
-      text-align: center;
-      vertical-align: middle;
-      font-weight: bold;
-      font-size: 30px;
-      border: 2px outset #ffffff;
-      font-family: "SquareDance00", sans-serif;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Buscaminas</title>
+    <link
+            href="https://fonts.cdnfonts.com/css/ds-digital"
+            rel="stylesheet"
+    >
+    <link
+            href="https://fonts.cdnfonts.com/css/square-dance"
+            rel="stylesheet"
+    >
+    <style>
+        body {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin: 50px 0;
+            font-family: "Arial", sans-serif;
+        }
+        table {
+            border-collapse: separate;
+            border-spacing: 2px;
+            background-color: #c0c0c0;
+            border: 4px outset #ffffff;
+            padding: 10px;
+            height: 480px;
+            width: 380px;
+        }
+        .top-bar {
+            background-color: #c0c0c0;
+            border: 3px inset #808080;
+            height: 60px;
+            padding: 3px;
+        }
+        .digital-display {
+            background-color: black;
+            color: red;
+            font-size: 50px;
+            font-weight: bold;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 30px;
+            font-family: "DS-Digital", sans-serif;
+        }
+        .emoji {
+            width: 50px;
+            height: 50px;
+            background-color: #c0c0c0;
+            border: 2px outset #ffffff;
+            vertical-align: middle;
+        }
+        .game-cell {
+            width: 30px;
+            height: 30px;
+            background-color: #c0c0c0;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bold;
+            border: 2px outset #ffffff;
+            padding: 0;
+        }
+        .number-1 {
+            color: blue;
+        }
+        .number-2 {
+            color: green;
+        }
+        .number-3 {
+            color: red;
+        }
+        .flag-img {
+            width: 24px;
+            height: 24px;
+        }
+        .game-grid td {
+            width: 30px;
+            height: 40px;
+            background-color: #c0c0c0;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bold;
+            font-size: 30px;
+            border: 2px outset #ffffff;
+            font-family: "SquareDance00", sans-serif;
+        }
+    </style>
 </head>
-
 <body>
 <h1>Practica 1.4.5</h1>
 <table>
-  <tr>
-    <td class="top-bar" colspan="9" style="text-align: center">
-      <p class="digital-display">000</p>
-      <img
-              alt="Smiley"
-              class="emoji"
-              src="https://cdn.pixabay.com/photo/2023/03/11/07/07/emoji-7843852_1280.png"
-      >
-      <p class="digital-display">072</p>
-    </td>
-  </tr>
-  <!--Fila 1-->
-  <tr class="game-grid">
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-  </tr>
-  <!--Fila 2-->
-  <tr class="game-grid">
-    <td class="game-cell number-2">2</td>
-    <td class="game-cell number-2">2</td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-  </tr>
-  <!--Fila 3-->
-  <tr class="game-grid">
-    <td class="game-cell">
-      <img
-              alt="Bandera"
-              class="flag-img"
-              src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
-      >
-    </td>
-    <td class="game-cell">
-      <img
-              alt="Bandera"
-              class="flag-img"
-              src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
-      >
-    </td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell number-2">2</td>
-    <td class="game-cell number-2">2</td>
-  </tr>
-  <!--Fila 4-->
-  <tr class="game-grid">
-    <td class="game-cell number-2">2</td>
-    <td class="game-cell number-3">3</td>
-    <td class="game-cell number-2">2</td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell">
-      <img
-              alt="Bandera"
-              class="flag-img"
-              src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
-      >
-    </td>
-    <td class="game-cell">
-      <img
-              alt="Bandera"
-              class="flag-img"
-              src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
-      >
-    </td>
-  </tr>
-  <!--Fila 5-->
-  <tr class="game-grid">
-    <td class="game-cell number-2">2</td>
-    <td class="game-cell number-3">3</td>
-    <td class="game-cell">
-      <img
-              alt="Bandera"
-              class="flag-img"
-              src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
-      >
-    </td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell number-3">3</td>
-    <td class="game-cell">
-      <img
-              alt="Bandera"
-              class="flag-img"
-              src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
-      >
-    </td>
-  </tr>
-  <!--Fila 6-->
-  <tr class="game-grid">
-    <td class="game-cell">
-      <img
-              alt="Bandera"
-              class="flag-img"
-              src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
-      >
-    </td>
-    <td class="game-cell">
-      <img
-              alt="Bandera"
-              class="flag-img"
-              src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
-      >
-    </td>
-    <td class="game-cell number-2">2</td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell number-1">1</td>
-  </tr>
-  <!--Fila 7-->
-  <tr class="game-grid">
-    <td class="game-cell number-2">2</td>
-    <td class="game-cell number-2">2</td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-  </tr>
-  <!--Fila 8-->
-  <tr class="game-grid">
-    <td class="game-cell"></td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell number-1">1</td>
-  </tr>
-  <!--Fila 9-->
-  <tr class="game-grid">
-    <td class="game-cell"></td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell">
-      <img
-              alt="Bandera"
-              class="flag-img"
-              src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
-      >
-    </td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell"></td>
-    <td class="game-cell number-1">1</td>
-    <td class="game-cell">
-      <img
-              alt="Bandera"
-              class="flag-img"
-              src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
-      >
-    </td>
-  </tr>
+    <tr>
+        <td class="top-bar" colspan="9" style="text-align: center">
+            <p class="digital-display">000</p>
+            <img
+                    alt="Smiley"
+                    class="emoji"
+                    src="https://cdn.pixabay.com/photo/2023/03/11/07/07/emoji-7843852_1280.png"
+            >
+            <p class="digital-display">072</p>
+        </td>
+    </tr>
+    <!--Fila 1-->
+    <tr class="game-grid">
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+    </tr>
+    <!--Fila 2-->
+    <tr class="game-grid">
+        <td class="game-cell number-2">2</td>
+        <td class="game-cell number-2">2</td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+    </tr>
+    <!--Fila 3-->
+    <tr class="game-grid">
+        <td class="game-cell">
+            <img
+                    alt="Bandera"
+                    class="flag-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
+            >
+        </td>
+        <td class="game-cell">
+            <img
+                    alt="Bandera"
+                    class="flag-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
+            >
+        </td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell number-2">2</td>
+        <td class="game-cell number-2">2</td>
+    </tr>
+    <!--Fila 4-->
+    <tr class="game-grid">
+        <td class="game-cell number-2">2</td>
+        <td class="game-cell number-3">3</td>
+        <td class="game-cell number-2">2</td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell">
+            <img
+                    alt="Bandera"
+                    class="flag-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
+            >
+        </td>
+        <td class="game-cell">
+            <img
+                    alt="Bandera"
+                    class="flag-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
+            >
+        </td>
+    </tr>
+    <!--Fila 5-->
+    <tr class="game-grid">
+        <td class="game-cell number-2">2</td>
+        <td class="game-cell number-3">3</td>
+        <td class="game-cell">
+            <img
+                    alt="Bandera"
+                    class="flag-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
+            >
+        </td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell number-3">3</td>
+        <td class="game-cell">
+            <img
+                    alt="Bandera"
+                    class="flag-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
+            >
+        </td>
+    </tr>
+    <!--Fila 6-->
+    <tr class="game-grid">
+        <td class="game-cell">
+            <img
+                    alt="Bandera"
+                    class="flag-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
+            >
+        </td>
+        <td class="game-cell">
+            <img
+                    alt="Bandera"
+                    class="flag-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
+            >
+        </td>
+        <td class="game-cell number-2">2</td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell number-1">1</td>
+    </tr>
+    <!--Fila 7-->
+    <tr class="game-grid">
+        <td class="game-cell number-2">2</td>
+        <td class="game-cell number-2">2</td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+    </tr>
+    <!--Fila 8-->
+    <tr class="game-grid">
+        <td class="game-cell"></td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell number-1">1</td>
+    </tr>
+    <!--Fila 9-->
+    <tr class="game-grid">
+        <td class="game-cell"></td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell">
+            <img
+                    alt="Bandera"
+                    class="flag-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
+            >
+        </td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell"></td>
+        <td class="game-cell number-1">1</td>
+        <td class="game-cell">
+            <img
+                    alt="Bandera"
+                    class="flag-img"
+                    src="https://static.vecteezy.com/system/resources/previews/027/517/790/non_2x/pixel-art-red-flag-icon-png.png"
+            >
+        </td>
+    </tr>
 </table>
 </body>
 </html>
