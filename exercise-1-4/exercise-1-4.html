@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horario Semanal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: auto;
+      text-align: center;
+    }
+    table {
+      width: 100%;
+      max-width: 1200px;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #fca311;
+      font-weight: bold;
+    }
+    .time-column {
+      font-weight: bold;
+      background-color: #fca311;
+    }
+    .clases {
+      background-color: #14213d;
+      color: #ffffff;
+    }
+    .ir-instituto {
+      background-color: #162a58;
+      color: #ffffff;
+    }
+    .casa {
+      background-color: #e5e5e5;
+    }
+  </style>
+</head>
+<body>
+<h1>Ejercicio 1.4</h1>
+<table>
+  <thead>
+  <tr>
+    <th>Hora</th>
+    <th>Lunes</th>
+    <th>Martes</th>
+    <th>Miércoles</th>
+    <th>Jueves</th>
+    <th>Viernes</th>
+    <th>Sábado</th>
+    <th>Domingo</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td class="time-column">10:30</td>
+    <td colspan="7" class="casa">Despertarse (a veces)</td>
+  </tr>
+  <tr>
+    <td class="time-column">10:30<br>13:00</td>
+    <td colspan="5" class="casa">Ver vídeos con el móvil en la cama</td>
+    <td colspan="2" rowspan="13" class="casa">Hago lo que surja</td>
+  </tr>
+  <tr>
+    <td class="time-column">13:00</td>
+    <td colspan="5" class="casa">Levantarme de la cama y lavarme la cara</td>
+  </tr>
+  <tr>
+    <td class="time-column">13:00<br>14:15</td>
+    <td colspan="5" class="casa">Tumbarme en la cama a ver vídeos</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">14:15<br>14:45</td>
+    <td colspan="5" class="casa">Desayuno - Almuerzo</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">14:45<br>15:00</td>
+    <td colspan="5" class="casa">Vestirme</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">15:00<br>15:15</td>
+    <td class="ir-instituto">Ir al instituto</td>
+    <td rowspan="2" class="ir-instituto">Escuchar música mientras me visto e ir al instituto</td>
+    <td class="ir-instituto">Ir al instituto</td>
+    <td class="ir-instituto">Ir al instituto</td>
+    <td rowspan="2" class="ir-instituto">Escuchar música mientras me visto e ir al instituto</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">15:15<br>16:15</td>
+    <td class="clases">SMX-M06</td>
+    <td class="clases">SMX-M04</td>
+    <td class="clases">SMX-M08</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">16:15<br>17:15</td>
+    <td class="clases">SMX-M06</td>
+    <td class="clases">SMX-M07</td>
+    <td class="clases">SMX-M04</td>
+    <td class="clases">SMX-M08</td>
+    <td class="clases">SMX-M08</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">17:15<br>18:15</td>
+    <td class="clases">SMX-M06</td>
+    <td class="clases">SMX-M07</td>
+    <td class="clases">SMX-M04</td>
+    <td class="clases">SMX-M012</td>
+    <td class="clases">SMX-M08</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">18:15<br>18:45</td>
+    <td colspan="5" class="clases">Patio</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">18:45<br>19:45</td>
+    <td class="clases">SMX-M07</td>
+    <td class="clases">SMX-M06</td>
+    <td class="clases">SMX-M04</td>
+    <td class="clases">SMX-M07</td>
+    <td class="clases">SMX-M04</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">19:45<br>20:45</td>
+    <td class="clases">SMX-M07</td>
+    <td class="clases">SMX-M06</td>
+    <td class="clases">Tutoría</td>
+    <td class="clases">SMX-M07</td>
+    <td class="clases">SMX-M04</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">20:45<br>21:45</td>
+    <td class="clases">SMX-M07</td>
+    <td colspan="4" class="casa">Ir a casa a estar con el móvil</td>
+
+  </tr>
+  <tr>
+    <td class="time-column">Después del instituto</td>
+    <td colspan="7" class="casa">Estar toda la noche con el móvil</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
